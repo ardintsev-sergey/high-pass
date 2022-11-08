@@ -1,0 +1,23 @@
+include ./_pictureMixin.pug
+
+section.hero
+  .container.hero__container
+    .hero__grid
+      .hero__grid-item.hero__grid-item-left
+        .hero__grid-item-hashtag #мастеркласс
+        +pictureMixin("/img/hero/hero1.webp 630w", "/img/hero/hero1_1024.webp 4668w", "/img/hero/hero1_768.webp 342w", "/img/hero/hero1_320.webp 278w", "/img/hero/hero1.jpg", "Фотосет")
+        .hero__grid-item-left-content
+          p.hero__grid-item-left-content-author Мастер-класс от Игоря Робова
+          p.hero__grid-item-left-content-date Неоновый фотосет 2.0 7 июля 20:00
+          button.hero__grid-item-left-content-btn.btn-reset Узнать больше
+
+      .hero__grid-item.hero__grid-item-right-top
+        h2.section-title.hero__title Работы участников предыдущего мастер-класса
+        +pictureMixin("/img/hero/hero2.webp 630w", "/img/hero/hero2_1024.webp 4668w", "/img/hero/hero2_320.webp 278w", "/img/hero/hero2_320.webp 105w", "/img/hero/hero2.jpg", "Работа 1")
+
+      .hero__grid-item.hero__grid-item-right-left
+        +pictureMixin("/img/hero/hero3.webp 257w", "/img/hero/hero3_1024.webp 186w", "/img/hero/hero3_768.webp 133w", "/img/hero/hero3_320.webp 105w", "/img/hero/hero3.jpg", "Работа 2")
+
+      .hero__grid-item.hero__grid-item-right-right
+        +pictureMixin("/img/hero/hero4.webp 257w", "/img/hero/hero4_1024.webp 186w", "/img/hero/hero4_768.webp 133w", "/img/hero/hero4_320.webp 105w", "/img/hero/hero4.jpg", "Работа 3")
+

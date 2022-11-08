@@ -1,0 +1,79 @@
+@import 'normalize';
+@import 'variables';
+@import 'resets';
+@import 'fonts';
+@import 'header';
+@import 'hero';
+@import 'about';
+@import 'projects';
+@import 'contacts';
+@import 'footer';
+@import 'actions';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: overlay;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 7px;
+  font-family: 'TT Firs Neue', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $titleColor;
+}
+
+.section-title-dark {
+  color: $backgroundColor;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.is-invalid {
+  color: $errorColor;
+  outline: 1px solid $errorColor;
+}
+
+.is-label-invalid {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  width: max-content;
+  font-family: 'Roboto', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  color: $errorColor;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 18px;
+  }
+}

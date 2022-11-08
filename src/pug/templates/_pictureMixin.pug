@@ -1,0 +1,7 @@
+mixin pictureMixin(src1920, src1024, src768, src320, srcImg, altName)
+  picture
+    source(srcset= src320 media="(max-width: 576px)" type="image/webp")
+    source(srcset= src768 media="(max-width: 992px)" type="image/webp")
+    source(srcset= src1024 media="(max-width: 1200px)" type="image/webp")
+    source(srcset= src1920 type="image/webp")
+    img(src= srcImg data-srcset= srcImg alt= altName)

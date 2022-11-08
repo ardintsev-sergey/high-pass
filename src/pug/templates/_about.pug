@@ -1,0 +1,27 @@
+include ./_pictureMixin.pug
+
+section.about
+  .container.about__container
+    .about__left
+      h2.section-title.about__title О студии
+      p.about__descr.
+                        В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно
+                        синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны:
+                        высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий
+                        активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость
+                        распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие
+                        возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения
+                        предполагает независимые способы реализации новых принципов формирования
+                        <span class="nowrap">материально-технической</span> и кадровой
+                        базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом
+                        политического участия и нарушающими общечеловеческие нормы этики.
+
+    .about__right
+      .about__right-img
+        +pictureMixin("/img/about.webp 630w", "/img/about_1024.webp 4668w", "/img/about_768.webp 342w", "/img/about_320.webp 278w", "/img/about.jpg", "Фото")
+      .about__right-mailing
+        h3.about__right-mailing-title Подписаться на рассылку
+        form.about__form(action="https://jsonplaceholder.typicode.com/")
+          label.about__form-label(for="about-email")
+            input.about__form-input.input-reset.about-email(type="text" id="about-email" placeholder="E-mail")
+          button.about__form-btn.btn-reset(type="submit") Отправить

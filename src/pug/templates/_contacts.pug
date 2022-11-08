@@ -1,0 +1,27 @@
+section.contacts
+  .container.contacts__container
+    h2.section-title.section-title-dark.contacts__title Контакты
+    .contacts__content
+      .contacts__content-left
+        .contacts__map#map
+        .contacts__content-left-place.map--active
+          .contacts__cls-btn.btn-reset
+          .contacts__content-left-text
+            h3.contacts__content-left-place-title Студия “High pass”
+            address.contacts__content-left-place-addr 107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+            a.contacts__content-left-place-tel.nowrap(href="tel:+749542423532")  +7 (495) 42-423-532
+              svg(width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg")
+                g(opacity="0.7")
+                  path(d="M18.3425 14.0983C17.215 14.0983 16.1242 13.915 15.1067 13.585C14.7858 13.475 14.4283 13.5575 14.1808 13.805L12.7417 15.6108C10.1475 14.3733 7.71833 12.0358 6.42583 9.35L8.21333 7.82833C8.46083 7.57167 8.53417 7.21417 8.43333 6.89333C8.09417 5.87583 7.92 4.785 7.92 3.6575C7.92 3.1625 7.5075 2.75 7.0125 2.75H3.84083C3.34583 2.75 2.75 2.97 2.75 3.6575C2.75 12.1733 9.83583 19.25 18.3425 19.25C18.9933 19.25 19.25 18.6725 19.25 18.1683V15.0058C19.25 14.5108 18.8375 14.0983 18.3425 14.0983Z" fill="white")
+
+      .contacts__content-right
+        h3.contacts__content-right-title Оставить заявку
+        p.contacts__content-right-descr Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия
+        form.contacts__content-right-form.form(action="https://jsonplaceholder.typicode.com/")
+          label.contacts__content-right-form-label(for="name")
+            input.contacts__content-right-form-input.input-reset.contacts-name(type="text" id="name" placeholder="Имя")
+          label.contacts__content-right-form-label(for="email")
+            input.contacts__content-right-form-input.input-reset.contacts-email(type="email" id="email" placeholder="E-mail")
+          label.contacts__content-right-form-label.textarea-label(for="textarea")
+            textarea.contacts__content-right-form-textarea.contacts-textarea(name="textarea" id="textarea" cols="30" placeholder="Комментарий")
+          button.contacts__content-right-form-btn.btn-reset(type="submit") Отправить

@@ -1,0 +1,308 @@
+@import 'variables';
+
+.header {
+  &__top {
+    background-color: $backgroundColor;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      padding-bottom: 21px;
+    }
+  }
+
+  &__bottom, &__burger, &__burger-close, &__menu-tel, &__search-input, &__search-input-btn {
+    display: none;
+  }
+
+  &__logo {
+    position: relative;
+    a::before {
+      position: absolute;
+      content: '';
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      transition: border 0.3s ease-in-out;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__nav {
+    width: 61.5%;
+    transform: none;
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-left: 50px;
+    }
+
+    &-item {
+      a {
+        font-family: 'TT Firs Neue', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: $titleColor;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // order: 10;
+
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .header__social-link svg path {
+      transition: fill 0.3s ease-in-out;
+    }
+  }
+
+  &__search {
+    display: none;
+    // order: 10;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    &__top-container {
+      padding-top: 26px;
+      padding-bottom: 25px;
+    }
+
+    &__logo {
+      width: 166px;
+      height: 27px;
+    }
+
+    &__nav {
+      width: 63%;
+
+      &-list {
+        padding-left: 0;
+        padding-right: 50px;
+      }
+    }
+
+    &__social {
+      display: none;
+    }
+
+    &__search {
+      display: block;
+      position: relative;
+      height: 28px;
+
+      &-form {
+        position: absolute;
+        display: flex;
+        right: 0;
+        background-color: $backgroundColor;
+        z-index: 10;
+      }
+
+      &-btn {
+        width: 25px;
+        height: 25px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .search--active {
+      .header__search-btn {
+        visibility: hidden;
+      }
+
+      .header__search-input {
+        display: block;
+        right: 0px;
+        width: 343px;
+        padding: 5px 20px 5px 0;
+        font-family: 'TT Firs Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $titleColor;
+        background-color: $backgroundColor;
+        &::placeholder {
+          border-bottom: 1px solid $titleColor;
+          color: $titleColor;
+        }
+      }
+      .header__search-input-btn {
+        display: block;
+        width: 23px;
+        height: 23px;
+        margin: 5px 5px 0 0;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    &__bottom {
+      display: block;
+      background-color: $inputColor;
+      padding-top: 13px;
+      padding-bottom: 15px;
+    }
+
+
+    .search--active {
+      .header__search-btn {
+        display: none;;
+      }
+    }
+
+   &__nav {
+     width: 100%;
+
+     &-list {
+      padding: 0;
+    }
+   }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    &__logo {
+      width: 116px;
+      height: 18px;
+    }
+
+    .logo--invisible {
+      display: none;
+    }
+
+    &__nav {
+      display: none;;
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50%;
+      }
+    }
+
+    .menu--open {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100vh;
+      padding: 10px 21px 30px 21px;
+      background-color: $backgroundColor;
+      z-index: 100;
+
+      .header__burger-close {
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .header__menu-tel {
+        display: block;
+        position: relative;
+        padding-left: 27px;
+        font-family: 'TT Firs Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        color: $btnColor;
+
+        svg {
+          position: absolute;
+          top: -1px;
+          left: 5px;
+        }
+      }
+
+      .header__menu-tel svg path{
+        fill: $btnColor;
+      }
+    }
+
+    .header__nav-item:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    &__burger {
+      display: block;
+    }
+
+    &__top-container {
+      padding-top: 21px;
+      padding-bottom: 22px;
+
+      .header__search-btn {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.header--search {
+        justify-content: flex-end;
+      }
+
+      .header__search-form {
+        width: 100%;
+        top: -10px;
+      }
+
+      .search--active {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        min-height: 24px;
+
+        .header__search-input {
+          width: 100%;
+        }
+
+        .header__search-input-btn {
+          width: 18px;
+          height: 18px;
+
+          svg circle {
+            fill: #c4c4c4;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      position: relative;
+      padding-bottom: 9px;
+    }
+  }
+
+
+}

@@ -1,0 +1,408 @@
+@import 'variables';
+
+.projects {
+  padding-top: 70px;
+  padding-bottom: 34px;
+
+  &__title.section-title {
+    margin-bottom: 15px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+
+    &-item {
+      position: relative;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      min-height: 300px;
+
+      &-article {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-hashtag {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        padding: 7px 14px 5px;
+        background-color: $hashColor;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $titleColor;
+      }
+
+      img {
+        width: 100%;
+        margin-bottom: 13px;
+        object-fit: cover;
+      }
+
+      &-descr {
+        margin: 0;
+        margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $backgroundColor;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        transition: color ease-in-out 0.3s, background ease-in-out 0.3s;
+
+        &::before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out;
+        }
+      }
+
+      &-date {
+        position: relative;
+        margin: 0;
+        padding-left: 18px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $dateColor;
+
+        &::before {
+          content: url('../img/projects/calendar.svg');
+          position: absolute;
+          top: 3px;
+          left: 0;
+        }
+
+        img {
+          width: 14px;
+        }
+      }
+      &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 51%;
+        height: 100%;
+        padding: 22px 0 31px 30px;
+        color: $titleColor;
+        .projects__grid-item-descr {
+          color: $titleColor;
+        }
+
+        .projects__grid-item-date {
+          &::before {
+            content: url('../img/projects/calendar-white.svg');
+            position: absolute;
+            z-index: 100;
+          }
+        }
+
+        .projects__grid-item-title {
+          margin: 0;
+          margin-bottom: 6px;
+          font-family: 'TT Firs Neue', sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+
+        .projects__grid-item-date {
+          margin-bottom: 2px;
+          color: $titleColor;
+        }
+
+        .projects__grid-item-btn {
+          padding: 13px 19px;
+          border: 3px solid $btnColor;
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 19px;
+          transition: background 0.3s ease-in-out;
+        }
+      }
+    }
+
+    &-item:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+
+    &-item:nth-child(2) {
+      grid-column: 3 / span 2;
+    }
+
+    &-item:nth-child(3) {
+      grid-column: 5 / span 2;
+    }
+
+    &-item:nth-child(4) {
+      grid-column: 7 / span 6;
+      .projects__grid-item-descr::before {
+        pointer-events: none;
+      }
+    }
+
+    &-item:nth-child(5) {
+      grid-column: 1 / span 6;
+      .projects__grid-item-descr::before {
+        pointer-events: none;
+      }
+    }
+
+    &-item:nth-child(4), &-item:nth-child(5) {
+      img {
+       position: absolute;
+       height: 100%;
+       z-index: -1;
+       margin-bottom: 0;
+      }
+    }
+
+    &-item:nth-child(6) {
+      grid-column: 7 / span 3;
+    }
+
+    &-item:nth-child(7) {
+      grid-column: 10 / span 3;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects {
+    &__title.section-title {
+      margin-bottom: 13px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(8, 1fr);
+      row-gap: 24px;
+
+      &-item {
+        min-height: 285px;
+        img {
+          margin-bottom: 12px;
+          height: 184px;
+        }
+
+        &-content {
+          max-width: 59%;
+          padding: 30px 0 36px 31px;
+        }
+
+        &-title {
+          width: 90%;
+        }
+
+        &-descr {
+          padding-right: 25px;
+          font-size: 16px;
+          line-height: 22px;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      &-item:nth-child(1) {
+        grid-column: 1 / span 2;
+      }
+
+      &-item:nth-child(2) {
+        grid-column: 3 / span 2;
+      }
+
+      &-item:nth-child(3) {
+        grid-column: 5 / span 4;
+      }
+
+      &-item:nth-child(4) {
+        grid-column: 1 / span 5;
+
+        a {
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      &-item:nth-child(5) {
+        order: 7;
+        grid-column: 4 / span 5;
+
+        a {
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      &-item:nth-child(5) &-item-content {
+        padding-bottom: 29px;
+      }
+
+      &-item:nth-child(6) {
+        grid-column: 6 / span 3;
+        a {
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      &-item:nth-child(7) {
+        grid-column: 1 / span 3;
+        a {
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      &-item:nth-child(6), &-item:nth-child(7) {
+        min-height: 307px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .projects {
+    &__grid {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 26px;
+      &-item {
+        min-height: 300px;
+        a {
+          -webkit-line-clamp: 3;
+        }
+
+        img {
+          height: 184px;
+          margin-bottom: 13px;
+        }
+
+        &-content {
+          max-width: 47%;
+          padding: 30px 0 29px 29px;
+        }
+
+        &-descr {
+          padding-right: 0;
+        }
+      }
+
+      &-item:nth-child(1) {
+        grid-column: 1 / span 2;
+      }
+
+      &-item:nth-child(2) {
+        grid-column: 3 / span 2;
+      }
+
+      &-item:nth-child(3) {
+        grid-column: 5 / span 2;
+      }
+
+      &-item:nth-child(4) {
+        grid-column: 1 / span 6;
+      }
+
+      &-item:nth-child(5) {
+        order: 7;
+        grid-column: 1 / span 6;
+      }
+
+      &-item:nth-child(6) {
+        grid-column: 1 / span 3;
+      }
+
+      &-item:nth-child(7) {
+        grid-column: 4 / span 3;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .projects {
+    padding-top: 52px;
+    padding-bottom: 31px;
+
+    &__title.section-title {
+      margin-bottom: 17px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      &-item {
+        // height: auto;
+        min-height: 278px;
+        img {
+          height: 184px;
+          margin-bottom: 12px;
+        }
+
+        a {
+          -webkit-line-clamp: 2;
+        }
+
+        &-content {
+          max-width: 100%;
+          padding-top: 196px;
+
+          .projects__grid-item-title {
+            margin-bottom: 10px;
+          }
+
+          .projects__grid-item-date {
+            margin-bottom: 7px;
+          }
+          .projects__grid-item-descr {
+            font-size: 14px;
+            line-height: 18px;
+          }
+
+          .projects__grid-item-btn {
+            font-size: 14px;
+            padding: 7px 18px;
+          }
+        }
+
+        &-hashtag {
+          right: 6px;
+          top: 5px;
+          padding: 4px 14px 2px;
+          font-size: 12px;
+        }
+      }
+
+      &-item:nth-child(n) {
+        grid-column: 1 / span 1;
+        img {
+          height: 184px;
+        }
+      }
+
+      &-item:nth-child(4), &-item:nth-child(5) {
+        min-height: 422px;
+        img {
+          height: 100%;
+        }
+      }
+
+      &-item:nth-child(6), &-item:nth-child(7) {
+        min-height: 300px;
+      }
+    }
+  }
+}

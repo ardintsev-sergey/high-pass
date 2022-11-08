@@ -1,0 +1,239 @@
+@import 'variables';
+
+.about {
+  padding-top: 32px;
+  padding-bottom: 67px;
+  background-color: $backgroundColor;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__left {
+    width: 48.5%;
+    .about__descr {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $textColor;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48.85%;
+    padding-top: 31px;
+
+    &-img {
+      height: 69%;
+      margin-bottom: 17px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-mailing {
+      &-title {
+        margin: 0;
+        margin-bottom: 14px;
+        font-family: 'TT Firs Neue', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: $titleColor;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+
+    &-label {
+      position: relative;
+      width: 75.2%;
+    }
+
+    .is-label-invalid {
+      position: absolute;
+      top: 4px;
+      left: 24px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+    }
+
+    &-input {
+      position: relative;
+      width: 100%;
+      padding: 15px 23px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      background-color: $inputColor;
+      color: $titleColor;
+      transition: color 0.3s ease-in-out;
+
+      &::placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: $textColor;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &-btn {
+      position: relative;
+      padding: 16px 23px;
+      background-color: $btnColor;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+
+      transition: background 0.3s ease-in-out;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    padding-bottom: 58px;
+
+    &__title.section-title {
+      margin-bottom: 6px;
+    }
+
+    &__left {
+      width: 48.3%;
+    }
+
+    &__right {
+      width: 48.4%;
+      padding-bottom: 21px;
+
+      &-img {
+        height: 64.5%;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__form {
+      display: block;
+
+      &-input {
+        width: 73%;
+        margin-bottom: 21px;
+      }
+
+      &-btn {
+        display: block;
+        padding: 16px 22px;
+      }
+
+      .is-label-invalid {
+        top: -7px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding-bottom: 49px;
+    &__title.section-title {
+      margin-bottom: 7px;
+    }
+
+    &__right {
+      width: 47.9%;
+
+      &-img {
+        height: 75.9%;
+      }
+
+      .about__form {
+        &-input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding-top: 34px;
+    padding-bottom: 60px;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+      margin-bottom: 21px;
+
+      .about__descr {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      padding: 0;
+
+      &-img {
+        height: 278px;
+        margin-bottom: 27px;
+      }
+
+      &-mailing-title {
+        font-size: 18px;
+      }
+
+      .about__form {
+        &-input {
+          margin-bottom: 22px;
+        padding: 10px 23px;
+        font-size: 14px;
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+        &-btn {
+          padding: 12px 22px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

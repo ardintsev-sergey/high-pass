@@ -1,0 +1,66 @@
+//- - var projects = [
+//-     {hashtag: "#пейзаж", descr: "Синтетически, смешаны с не уникальными данными до степени...", date: "16 июня"},
+//-     {hashtag: "#портрет", descr: "В своём стремлении улучшить опыт мы упускаем, что явные...", date: "28 мая"},
+//-     {hashtag: "#предмет", descr: "Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада", date: "14 мая"}
+//-   ]
+include ./_pictureMixin.pug
+section.projects
+  .container
+    h2.section-title.section-title-dark.projects__title Наши проекты
+    ul.projects__grid.list-reset
+      li.projects__grid-item
+        article.projects__grid-item-article
+          .projects__grid-item-hashtag #пейзаж
+          +pictureMixin("/img/projects/project1.webp 190w", "/img/projects/project1_1024.webp 218w", "/img/projects/project1_768.webp 218w", "/img/projects/project1_320.webp 278w", "/img/projects/project1.jpg", "Пейзаж")
+          a.projects__grid-item-descr(href="#") Синтетически, смешаны с не уникальными данными до степени...
+          p.projects__grid-item-date 16 июня
+
+      li.projects__grid-item
+        article.projects__grid-item-article
+          .projects__grid-item-hashtag #портрет
+          +pictureMixin("/img/projects/project2.webp 190w", "/img/projects/project2_1024.webp 218w", "/img/projects/project2_768.webp 218w", "/img/projects/project2_320.webp 278w", "/img/projects/project2.jpg", "Портрет")
+          a.projects__grid-item-descr(href="#") В своём стремлении улучшить опыт мы упускаем, что явные...
+          p.projects__grid-item-date 28 мая
+
+      li.projects__grid-item
+        article.projects__grid-item-article
+          .projects__grid-item-hashtag #предмет
+          +pictureMixin("/img/projects/project3.webp 190w", "/img/projects/project3_1024.webp 466w", "/img/projects/project3_768.webp 218w", "/img/projects/project3_320.webp 278w", "/img/projects/project3.jpg", "Предмет")
+          a.projects__grid-item-descr(href="#") Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада
+          p.projects__grid-item-date 28 мая
+
+      li.projects__grid-item
+        article.projects__grid-item-article
+          +pictureMixin("/img/projects/project4.webp 530w", "/img/projects/project4_1024.webp 690w", "/img/projects/project4_768.webp 715w", "/img/projects/project4_320.webp 280w", "/img/projects/project4.jpg", "fuji")
+          .projects__grid-item-hashtag #fuji
+          .projects__grid-item-content
+            div
+              p.projects__grid-item-date 9 апреля
+              h3.projects__grid-item-title Cемантический разбор
+              a.projects__grid-item-descr(href="#") В рамках спецификации современных стандартов, интерактивные прототипы...
+            button.projects__grid-item-btn.btn-reset О проекте
+
+      li.projects__grid-item
+        article.projects__grid-item-article
+          +pictureMixin("/img/projects/project5.webp 530w", "/img/projects/project5_1024.webp 690w", "/img/projects/project5_768.webp 715w", "/img/projects/project5_320.webp 280w", "/img/projects/project5.jpg", "Проект забвение")
+          .projects__grid-item-hashtag #проектзабвение
+          .projects__grid-item-content
+            div
+              p.projects__grid-item-date 20 марта
+              h3.projects__grid-item-title Забвение
+              a.projects__grid-item-descr(href="#") Играет важную роль в формировании глубокомысленных рассуждений
+            button.projects__grid-item-btn.btn-reset О проекте
+
+      li.projects__grid-item
+        article.projects__grid-item-article
+          .projects__grid-item-hashtag #ретушь
+          +pictureMixin("/img/projects/project6.webp 300w", "/img/projects/project6_1024.webp 342w", "/img/projects/project6_768.webp 342w", "/img/projects/project6_320.webp 278w", "/img/projects/project6.jpg", "Ретушь")
+          a.projects__grid-item-descr(href="#") Как принято считать, многие известные личности и по сей день остаются уделом либералов...
+          p.projects__grid-item-date 9 марта
+
+      li.projects__grid-item
+        article.projects__grid-item-article
+          .projects__grid-item-hashtag #портрет
+          +pictureMixin("/img/projects/project7.webp 300w", "/img/projects/project7_1024.webp 342w", "/img/projects/project7_768.webp 342w", "/img/projects/project7_320.webp 278w", "/img/projects/project7.jpg", "Портрет")
+          a.projects__grid-item-descr(href="#") С учётом сложившейся международной обстановки, новая модель организационной...
+          p.projects__grid-item-date 1 марта

@@ -1,0 +1,121 @@
+@import 'variables';
+
+:focus {
+  // border: 0;
+  outline: 0;
+}
+
+@media (min-width: 992px) {
+  .header__nav-link:hover {
+    color: $btnColor;
+  }
+
+  .header__social-link:hover svg path,
+  .footer__right-social-link:hover svg path {
+    fill: $btnColor;
+  }
+
+  .hero__grid-item-left-content-btn:hover,
+  .about__form-btn:hover,
+  .contacts__content-right-form-btn:hover {
+    background-color: $focusColor;
+  }
+
+  .about__form-input:hover::placeholder,
+  .contacts__content-right-form-input:hover::placeholder,
+  .contacts__content-right-form-textarea:hover::placeholder {
+    color: $btnColor;
+  }
+
+  .projects__grid-item-btn:hover {
+    background-color: $btnColor;
+  }
+
+  .projects__grid-item:not(:nth-child(4), :nth-child(5)):hover {
+    .projects__grid-item-descr {
+    color: $btnColor;
+      &::before {
+        background-color: rgba(0, 0, 0, 0.2 );
+      }
+    }
+  }
+
+  .contacts__content-left-place-tel:hover,
+  .contacts__content-left-place-tel:focus {
+    color: $btnColor;
+  }
+
+  .contacts__content-left-place-tel:hover svg path,
+  .contacts__content-left-place-tel:focus svg path{
+    fill: $btnColor;
+  }
+}
+
+.header__logo a:focus::before,
+.footer__logo a:focus::before {
+  border: $activeColor 1px solid;
+}
+
+.header__nav-link:focus {
+  background-color: $focusColor;
+}
+
+.header__nav-link:active {
+  color: $activeColor;
+}
+
+.header__social-link:focus svg path,
+.footer__right-social-link:focus svg path {
+  fill: $focusColor;
+}
+
+.header__social-link:active svg path,
+.footer__right-social-link:active svg path {
+  fill: $activeColor;
+}
+
+.hero__grid-item-left-content-btn:focus::before,
+.about__form-btn:focus::before,
+.contacts__content-right-form-btn:focus::before {
+  border: 3px solid $activeColor;
+}
+
+.hero__grid-item-left-content-btn:active,
+.about__form-btn:active,
+.contacts__content-right-form-btn:active {
+  background-color: $activeColor;
+}
+
+.about__form-input:focus,
+.contacts__content-right-form-input:focus,
+.contacts__content-right-form-textarea:focus {
+  outline: 1px solid $btnColor;
+}
+
+.about__form-input:active,
+.contacts__content-right-form-input:active,
+.contacts__content-right-form-textarea:active {
+  outline: 1px solid #F06666;
+}
+
+.projects__grid-item-btn:focus {
+  background-color: $focusColor;
+}
+
+.projects__grid-item-btn:active {
+  background-color: $activeColor;
+}
+
+.projects__grid-item:not(:nth-child(4), :nth-child(5)):active {
+  .projects__grid-item-descr {
+  color: $activeColor;
+  }
+}
+
+.projects__grid-item:not(:nth-child(4), :nth-child(5)) {
+  .projects__grid-item-descr:focus {
+  background: $bgAnchorColor;
+  }
+}
+
+
